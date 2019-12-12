@@ -1,0 +1,25 @@
+apply plugin: 'idea'
+apply plugin: 'project-report'
+apply plugin: 'scala'
+//apply plugin: 'org.scoverage'
+//apply plugin: 'com.github.johnrengelman.shadow'
+apply plugin: 'maven'
+
+ext {
+
+}
+
+repositories {
+    mavenLocal()
+    jcenter()
+    //maven { url }
+}
+
+dependencies {
+    compile 'org.scala-lang:scala-library:2.12.8'
+
+    testCompile 'junit:junit:4.12'
+    testCompile 'org.scalatest:scalatest_2.12:3.0.5'
+
+    //testRuntimeOnly 'org.scala-lang.modules:scala-xml_2.12:1.1.1'
+}
